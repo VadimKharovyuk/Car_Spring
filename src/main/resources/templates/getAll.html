@@ -16,6 +16,7 @@
     <th scope="col">Color</th>
     <th scope="col">Years</th>
     <th scope="col">Price</th>
+    <th scope="col">Transmision</th>
     <th scope="col">Action</th>
 
   </tr>
@@ -28,9 +29,11 @@
         <td th:text="${student.color}" />
         <td th:text="${student.yearManufacturing}" />
         <td th:text="${student.price}" />
+        <td th:text="${student.transmission}" />
         <td>
-            <a th:href="@{/cars/all/{id}(id=${student.getId()})} "
+            <a th:href="@{/cars/all/(carId=${student.getId()})} "
                class="btn btn-danger">Удалить</a>
+<!--            <a th:href="@{/cars/all(employeeId=${student.id})}" class="btn btn-danger ml-2">Delete</a>-->
 
         </td>
     </tr>

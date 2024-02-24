@@ -21,6 +21,7 @@ public class Car {
     private String model;
     private int yearManufacturing;
     private double price;
+    private String transmission ;
     @Transient
      private  boolean isManual;
 }

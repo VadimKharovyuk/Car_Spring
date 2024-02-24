@@ -31,6 +31,7 @@ public class CarController {
 public String deleteById(@PathVariable  Long id){
         carRepository.deleteById(id);
     return "redirect:/getAll";
+  //  redirect:/
 
 }
 }

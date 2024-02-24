@@ -11,7 +11,8 @@
         Brand : <input type="text" th:field="*{brand}" required>
     </div>
     <div>
-        Model : <input type="text" th:field="*{model}" required>
+<!--        <label for Model > Model </label>-->
+        Model : <input id="Model" type="text" th:field="*{model}" required>
     </div>
     Color  <select th:field="*{color}">
         <option th:value="Red"> Red</option>
@@ -22,8 +23,10 @@
     </select>
     <div>
         Transmission type;
-        <input type="radio" name="Transmission type" value="auto" Automatic>
-        <input type="radio" name="Transmission type" value="manual " manual>
+        <label for auto > auto</label>
+        <input th:field="*{transmission}" type="radio" name="Transmission type" value="auto" Automatic>
+        <label for manual > manual</label>
+        <input th:field="*{transmission}" type="radio" name="Transmission type" value="manual " manual>
     </div>
     <div>
         Year : <input type="number" th:field="*{yearManufacturing}" required>
