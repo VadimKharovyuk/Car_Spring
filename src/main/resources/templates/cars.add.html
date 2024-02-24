@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Car</title>
+</head>
+<body>
+<h1> Add new Car</h1>
+<form  action="#" th:action="@{/cars/add}" th:object="${car}" method="post">
+    <div>
+        Brand : <input type="text" th:field="*{brand}" required>
+    </div>
+    <div>
+        Model : <input type="text" th:field="*{model}" required>
+    </div>
+    Color  <select th:field="*{color}">
+        <option th:value="Red"> Red</option>
+        <option th:value="Blue"> Blue</option>
+        <option th:value="Green"> Green</option>
+        <option th:value="black"> Black</option>
+    </select>
+    <div>
+        Transmission type;
+        <input type="radio" name="Transmission type" value="auto" Automatic>
+        <input type="radio" name="Transmission type" value="manual " manual>
+    </div>
+    <div>
+        Year : <input type="number" th:field="*{yearManufacturing}" required>
+    </div>
+    <div>
+        Price : <input type="number" th:field="*{price}" required>
+    </div>
+
+   <button type="submit" value="some "> Add car  </button>
+
+</form>
+
+</body>
+</html>
