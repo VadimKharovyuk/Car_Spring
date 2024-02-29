@@ -27,11 +27,11 @@ public class CarController {
         model.addAttribute("car",carRepository.findAll());
         return "getAll" ;
     }
-@DeleteMapping("/all{id}")
-public String deleteById(@PathVariable  Long id){
-        carRepository.deleteById(id);
-    return "redirect:/getAll";
-  //  redirect:/
-
-}
+//@RequestMapping("/deleteCar/{id}")
+//public String deleteById(@PathVariable (name = "id") Long id){
+//        carRepository.deleteById(id);
+//    return "redirect:/getAll";
+//  //  redirect:/
+//
+//}
 }

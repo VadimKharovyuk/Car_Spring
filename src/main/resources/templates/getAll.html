@@ -30,12 +30,9 @@
         <td th:text="${student.yearManufacturing}" />
         <td th:text="${student.price}" />
         <td th:text="${student.transmission}" />
-        <td>
-            <a th:href="@{/cars/all/(carId=${student.getId()})} "
-               class="btn btn-danger">Удалить</a>
-<!--            <a th:href="@{/cars/all(employeeId=${student.id})}" class="btn btn-danger ml-2">Delete</a>-->
+        <td ><a  th:href="@{/delete/{id}(id=${student.id})}"
 
-        </td>
+                class="btn btn-danger">Удалить</a> </td>
     </tr>
 
 
